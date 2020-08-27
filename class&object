@@ -3,11 +3,28 @@
 //penjualan produk
 //laptop
 //aksesoris
-Class Produk{
 
+class produk{
+  public $namaBarang = "Laptop", 
+          $merk = "Lenovo", 
+            $harga = 7000000;
+            //membuat method
+            // public function cetakProduk(){
+            // 	return "Produknya adalah...";
+            // }
+            public function getCetak(){
+
+            	return "$this->namaBarang, $this->merk, $this->harga";
+            }
 }
+$produk1 = new produk();
+echo "Nama barang: " . $produk1 -> getCetak();
 
-$produk1 = new Produk();
-$produk2 = new Produk();
+echo "<br>";
 
+$produk2 = new produk();
+$produk2 ->namaBarang = "Keyboard";
+$produk2 ->merk = "Logitech";
+$produk2 ->harga = 500000;
+echo "Nama Barang: " . $produk2 -> getCetak();
 ?>
